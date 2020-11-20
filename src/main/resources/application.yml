@@ -1,6 +1,11 @@
 micronaut:
   application:
     name: snippetsOfCode
+  io:
+    watch:
+      enabled: true
+      restart: true
+      paths: src/main
   router:
     static-resources:
       default:
@@ -11,7 +16,7 @@ micronaut:
     thymeleaf:
       enabled: true
       character-encoding: "UTF-8"
-      suffix: "html"
+      suffix: ".html"
       cacheable: false
 
 
@@ -20,7 +25,7 @@ datasources:
     url: jdbc:postgresql://localhost:5432/snippetscode
     driverClassName: org.postgresql.Driver
     username: postgres
-    password: 'postgres'
+    password: 'test'
     schema-generate: CREATE_DROP
     dialect: POSTGRES
 jpa.default.properties.hibernate.hbm2ddl.auto: update

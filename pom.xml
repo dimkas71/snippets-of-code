@@ -103,6 +103,16 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
+      <groupId>io.methvin</groupId>
+      <artifactId>directory-watcher</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.java.dev.jna</groupId>
+      <artifactId>jna</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
@@ -129,6 +139,16 @@
       <plugin>
         <groupId>io.micronaut.build</groupId>
         <artifactId>micronaut-maven-plugin</artifactId>
+        <configuration>
+          <watches>
+            <watch>
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.yml</include>
+              </includes>
+            </watch>
+          </watches>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
