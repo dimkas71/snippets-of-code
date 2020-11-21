@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{/fragments/layout :: layout(~{::title}, ~{::section})}" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Snippet List</title>
+</head>
+<body>
+    <section>
+        <div class="row">
+            <div class="col">DESCRIPTION</div>
+            <div class="col">SOURCE</div>
+            <div class="col">CREATED AT</div>
+            <div class="col">UPDATED AT</div>
+        </div>
+        <div class="row" th:each="snippet: ${snippets}">
+            <div class="col" th:text="${snippet.description}">Some description here...</div>
+            <div class="col" th:text="${snippet.source}">source here...</div>
+            <div class="col" th:text="${snippet.createdAt}">created at here...</div>
+            <div class="col" th:text="${snippet.updatedAt}">updated at here...</div>
+        </div>
+    </section>
+</body>
+</html>
