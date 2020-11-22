@@ -10,12 +10,14 @@
             <div class="col">SOURCE</div>
             <div class="col">CREATED AT</div>
             <div class="col">UPDATED AT</div>
+            <div class="col">#EDIT</div>
         </div>
         <div class="row" th:each="snippet: ${snippets}">
             <div class="col" th:text="${snippet.description}">Some description here...</div>
             <div class="col" th:text="${snippet.source}">source here...</div>
             <div class="col" th:text="${snippet.createdAt}">created at here...</div>
             <div class="col" th:text="${snippet.updatedAt}">updated at here...</div>
+            <div class="col"><a class="btn btn-primary stretched-link" th:href="@{/snippet/edit/{id}(id = ${snippet.id})}">Edit</a></div>
         </div>
     </section>
 </body>

@@ -25,7 +25,7 @@ datasources:
     url: jdbc:postgresql://localhost:5432/snippetscode
     driverClassName: org.postgresql.Driver
     username: postgres
-    password: 'test'
+    password: 'postgres'
     schema-generate: CREATE_DROP
     dialect: POSTGRES
 jpa.default.properties.hibernate.hbm2ddl.auto: update
